@@ -1,0 +1,106 @@
+body{
+  background-color: rgb(2, 2, 19);
+  color: rgb(255, 255, 255);
+}
+
+p{
+  font-size: 20px;
+  background: -webkit-linear-gradient(rgb(149, 149, 177), rgb(233, 237, 241));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.center{
+  /* border: 2px solid rgb(6, 9, 93); */
+  padding: 1px;
+  margin: 1%;
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+}
+
+h5{
+  display: flex;
+  justify-content: center;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content{
+  background-color: rgb(33, 11, 57);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 20px;
+  min-width: 310px;
+}
+
+.button{
+  margin: 2px;
+  padding: 10px;
+  font-family: sans-serif;
+  font-weight: 900;
+  background-color: blueviolet;
+  border-radius: 10px;
+  color: white;
+}
+
+.dropdown-content{
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 0.5px solid black;
+  text-decoration: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.content-dropdown{
+  display: flex;
+  justify-content: center;
+}
+
+.content-dropdown:hover{
+  background-color: rgb(199, 181, 181);
+  color: white;
+}
+
+a{
+  text-decoration: none;
+}
+
+.show{
+  visibility: visible;
+}
+
+#dropdown-button{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#dropdown-button:hover{
+  background-color: red;
+  color: white;
+  border: solid red ;
+}
+
+#selectOption{
+  background-color: rgb(97, 26, 110);
+  color: white;
+  cursor: pointer;
+}
+option{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#selectOption:hover{
+  border: 1px solid rgb(233, 156, 245);
+}
