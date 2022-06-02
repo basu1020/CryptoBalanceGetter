@@ -10,15 +10,15 @@ function App() {
   const [contract, setContract] = useState(null)
   const [addresses, setAddresses] = useState(contractAddresses)
   const [tokenName, setTokenName] = useState("ETH")
-  const [address, setAddress] = useState() 
+  const [address, setAddress] = useState()
 
   const checkBalance = async () => {
     const addressinp = document.querySelector('#address').value
-    
+    const INFURA_ID = 'a46c4873075d48ec92fe67b184a6fbdb'
+    const provider = new ethers.providers.JsonRpcProvider(`https://mainnet.infura.io/v3/${INFURA_ID}`)
+
     if (addressinp && tokenName !== "ETH") {
       setProgress(10)
-      const INFURA_ID = 'a46c4873075d48ec92fe67b184a6fbdb'
-      const provider = new ethers.providers.JsonRpcProvider(`https://mainnet.infura.io/v3/${INFURA_ID}`)
       const ERC20_ABI = [
         "function balanceOf(address) view returns (uint)",
       ]
@@ -30,10 +30,8 @@ function App() {
       setResult(`${ethers.utils.formatEther(res)} ${tokenName} Tokens`)
     }
 
-    else if(addressinp && tokenName === "ETH"){
+    else if (addressinp && tokenName === "ETH") {
       setProgress(10)
-      const INFURA_ID = 'a46c4873075d48ec92fe67b184a6fbdb'
-      const provider = new ethers.providers.JsonRpcProvider(`https://mainnet.infura.io/v3/${INFURA_ID}`)
       setProgress(40)
       const balance = await provider.getBalance(addressinp)
       setProgress(100)
