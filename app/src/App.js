@@ -15,7 +15,7 @@ function App() {
   const checkBalance = async () => {
     const addressinp = document.querySelector('#address').value
     const INFURA_ID = 'a46c4873075d48ec92fe67b184a6fbdb'
-    const provider = new ethers.providers.JsonRpcProvider(`https://mainnet.infura.io/v3/${INFURA_ID}`)
+    const provider = new ethers.providers.JsonRpcProvider(`https://goerli.infura.io/v3/${INFURA_ID}`)
 
     if (addressinp && tokenName !== "ETH") {
       setProgress(10)
